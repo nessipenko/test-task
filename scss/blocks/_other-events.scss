@@ -1,0 +1,148 @@
+.other-events {
+    &__title {
+        margin-top: 110px;
+    }
+}
+
+.carousel {
+    height: 682px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    &__slide {
+        flex: 0 0 95%;
+        transition: transform 0.5s;
+    }
+
+}
+
+.event.active {
+    display: flex;
+}
+
+.event__wrapper {
+    display: flex;
+}
+
+.event__wrapper_img {
+    flex: 0 0 200px;
+}
+
+.event__wrapper_info {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.event {
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        min-width: 1082px;
+
+        img {
+            max-height: 682px;
+        }
+
+        &_info {
+            position: absolute;
+        }
+
+        &_img {
+            margin-left: 85px;
+        }
+    }
+
+    &__detailed {
+        position: absolute;
+        width: 449px;
+        min-height: 100%;
+        background: rgba(18, 18, 18, 0.8);
+        backdrop-filter: blur(20px);
+
+        &_num {
+            font-family: 'SF Pro Display';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 380px;
+            line-height: 90%;
+            letter-spacing: -0.03em;
+            color: rgba(255, 255, 255, 0.04);
+        }
+
+        &_info {
+            margin-left: 125px;
+
+            &_title {
+                margin-top: 136px;
+                font-family: 'SF Pro Display';
+                font-weight: 600;
+                font-size: 24px;
+                color: #FFFFFF;
+            }
+
+            &_date {
+                margin-top: 12px;
+                font-family: 'SF Pro Display';
+                font-weight: 400;
+                font-size: 18px;
+                color: rgba(255, 255, 255, 0.8);
+            }
+
+            &_btn {
+                margin-top: 25px;
+                width: 256px;
+                height: 62px;
+                background: none;
+                border: 2px solid rgba(255, 255, 255, 0.8);
+                border-left-width: 8px;
+
+                a {
+                    font-family: 'SF Pro Display';
+                    font-weight: 600;
+                    font-size: 18px;
+                    letter-spacing: 0.03em;
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+
+    &__brief {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 85px;
+        height: 682px;
+        background-color: $main-color;
+        color: #FFFFFF;
+
+        &_blur {
+            background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, $main-color 100%);
+
+        }
+
+        &_num {
+            margin: 40px 0 20px;
+            font-family: 'SF Pro Display';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: -0.03em;
+        }
+
+        &_title {
+            margin-bottom: 100px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 100%;
+            white-space: nowrap;
+            transform: rotate(-90deg);
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.countdown {
+    margin-top: 32px;
+
+
+    .timer {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 588px;
+        max-height: 131px;
+        opacity: 0;
+        animation: show-head 1.5s forwards;
+        animation-delay: 0.4s;
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 131px;
+
+            &_num {
+                font-weight: 600;
+                font-size: 72px;
+                line-height: 100%;
+                color: $main-color;
+            }
+
+            &_background {
+                margin-top: 4px;
+                height: 55px;
+                width: 132px;
+                background: url('../img/red_vector.svg') no-repeat;
+            }
+
+            &_title {
+                margin-top: 20px;
+                text-align: center;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 16px;
+                color: #FFFFFF;
+            }
+        }
+
+        &__drops {
+            font-weight: 600;
+            font-size: 72px;
+            line-height: 100%;
+            color: $main-color;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .countdown {
+        margin-top: 40px;
+
+        .timer {
+            width: 358px;
+
+            &__block {
+                height: 82px;
+
+                &_num {
+                    font-size: 36px;
+                }
+
+                &_background {
+                    margin-top: 6px;
+                    height: 40px;
+                    width: 64px;
+                    background: url('../img/red_vector_tab.svg') no-repeat;
+                }
+
+                &_title {
+                    margin-top: 12px;
+                    font-size: 12px;
+                }
+            }
+
+            &__drops {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .countdown {
+
+        .timer {
+            width: 320px;
+
+        }
+    }
+}

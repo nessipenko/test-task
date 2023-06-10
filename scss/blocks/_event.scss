@@ -1,0 +1,44 @@
+.event {
+    margin-top: 71px;
+    opacity: 0;
+    animation: show-head 1.5s forwards;
+    animation-delay: 0.7s;
+
+    &__check {
+        margin-bottom: 12px;
+
+        &_link {
+            position: relative;
+            display: flex;
+            padding-left: 28px;
+            align-items: center;
+            margin: 0 auto;
+            width: 212px;
+            height: 60px;
+            background: #1D4169;
+            border-radius: 40px;
+            border: none;
+            font-weight: 400;
+            font-size: 18px;
+            text-decoration: none;
+            color: #FFFFFF;
+
+        }
+    }
+}
+
+.link_arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .event {
+        margin-top: 40px;
+
+        &__check {
+            margin-bottom: 15px;
+        }
+    }
+}

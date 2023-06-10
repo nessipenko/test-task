@@ -1,0 +1,64 @@
+.vector {
+
+    &__left,
+    &__right {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        animation: show-vector 1.5s forwards;
+        animation-delay: 0.9s;
+    }
+
+    &__left {
+        left: 0px;
+    }
+
+    &__right {
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .vector {
+
+        &__left {
+            width: 249px;
+            height: 209px;
+        }
+
+        &__right {
+            width: 280px;
+            height: 294px;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    .vector {
+        &__left {
+            width: 182px;
+            height: 146px;
+        }
+
+        &__right {
+            width: 183px;
+            height: 215px;
+
+        }
+    }
+}
+
+
+@keyframes show-vector {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
