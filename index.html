@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper_footer">
         <div class="vector">
             <svg class="vector__left" width="470" height="419" viewBox="0 0 470 419" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -118,195 +118,239 @@
             </div>
         </section>
     </div>
-    <footer id="footer" class="footer">
-        <div class="footer__form">
-            <form id="subscription_form" action="send.php" method="post">
-                <input id="email_input" class="footer__form_input" type="text" name="email"
-                    placeholder="Enter your Email and get notified">
-                <input id="submit_btn" class="footer__form_btn" type="submit" value=" ">
-            </form>
-        </div>
 
-        <div class="footer__other">
-            <button class="footer__other_btn" onclick="location.href='#other-events'">
-                <span class="btn_text">Other Events</span>
-                <img class="footer__other_arrow" src="img/arrow_down.svg" alt="arrow">
-            </button>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer__form">
+                <form id="subscription_form" action="https://formspree.io/f/mnqykkrn" method="POST">
+                    <input required id="email_input" class="footer__form_input" type="text" name="email"
+                        placeholder="Enter your Email and get notified">
+                    <input id="submit_btn" class="footer__form_btn" type="submit" value=" ">
+                </form>
+            </div>
+
+            <div class="footer__other">
+                <button class="footer__other_btn">
+                    <span class="btn_text">Other Events</span>
+                    <img class="footer__other_arrow" src="img/arrow_down.svg" alt="arrow">
+                </button>
+            </div>
         </div>
     </footer>
-
-    <section id="modal" style="display: none;" class="modal show">
-        <div class="success-form">
-            <div class="success-form__close">
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_5_64)">
-                        <path
-                            d="M13.6711 12.8072L24.0706 2.40765C24.4368 2.04151 24.4368 1.44789 24.0706 1.08179C23.7045 0.715702 23.1109 0.715655 22.7448 1.08179L12.3452 11.4814L1.94568 1.08179C1.57954 0.715655 0.985913 0.715655 0.61982 1.08179C0.253727 1.44794 0.25368 2.04156 0.61982 2.40765L11.0193 12.8072L0.61982 23.2068C0.25368 23.5729 0.25368 24.1665 0.61982 24.5326C0.802866 24.7157 1.04282 24.8072 1.28277 24.8072C1.52272 24.8072 1.76263 24.7157 1.94572 24.5326L12.3452 14.1331L22.7447 24.5326C22.9278 24.7157 23.1677 24.8072 23.4077 24.8072C23.6476 24.8072 23.8875 24.7157 24.0706 24.5326C24.4368 24.1665 24.4368 23.5729 24.0706 23.2068L13.6711 12.8072Z"
-                            fill="#135978" fill-opacity="0.5" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_5_64">
-                            <rect width="24" height="24" fill="white" transform="translate(0.345703 0.806458)" />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </div>
-            <div class="success-form__title">SUCCESS!</div>
-            <div class="success-form__subtitle">You have successfully subscribed to the email newsletter!</div>
-            <button class=" success-form__btn">Close</button>
-        </div>
-    </section>
-
     <section id="other-events" class="other-events">
         <div class="container">
             <h2 class="other-events__title">All events</h2>
 
-            <!-- 
-            <div class="carousel">
-
-                <div class="carousel__slide active">
+            <ul class="carousel">
+                <li class="carousel__slide active visited">
                     <div class="event__wrapper">
-                        <div class="event__wrapper_img">
-                            <img src="img/event_1.jpeg" alt="hawaiian_event">
-                        </div>
+                        <img src="img/event_1.jpeg" class="event__wrapper_image tablet-hidden" alt="hawaiian_event">
+                        <img src="img/event_1.jpeg" class="event__wrapper_image tablet-show" alt="hawaiian_event">
                         <div class="event__wrapper_info">
-                            <div class="event__detailed">
-                                <div class="event__detailed_num">01</div>
-                                <div class="event__detailed_info">
-                                    <div class="event__detailed_info_title">Hawaiian event</div>
-                                    <div class="event__detailed_info_date">13.02.2023</div>
-                                    <button class="event__detailed_info_btn">
-                                        <a href="#">More information</a></button>
-                                </div>
-                            </div>
-                            <div class="event__brief">
-                                <div class="event__brief_num">01</div>
-                                <div class="event__brief_title">Hawaiian event</div>
-                            </div>
+                            <div class="event__wrapper_info_vertical">Hawaiian event</div>
+                            <div class="event__wrapper_info_horizontal">01</div>
                         </div>
                     </div>
-                </div>
-
-
-                <div class="carousel__slide">
-                    <div class="event__wrapper">
-                        <div class="event__wrapper_img">
-                            <img src="img/event_2.jpeg" alt="">
-                        </div>
-                        <div class="event__wrapper_info">
-                            <div class="event__detailed">
-                                <div class="event__detailed_num">02</div>
-                                <div class="event__detailed_info">
-                                    <div class="event__detailed_info_title">Мafia event</div>
-                                    <div class="event__detailed_info_date">11.01.2023</div>
-                                    <button class="event__detailed_info_btn">
-                                        <a href="#">More information</a></button>
-                                </div>
-                            </div>
-                            <div class="event__brief event__brief_blur">
-                                <div class="event__brief_num">02</div>
-                                <div class="event__brief_title">Мafia event</div>
-                            </div>
+                    <div class="event__detailed">
+                        <img src="img/event_1.jpeg" class="event__detailed_image" alt="hawaiian_event">
+                        <div class="event__detailed_info">
+                            <div class="event__detailed_num">01</div>
+                            <div class="event__detailed_info_title">Hawaiian event</div>
+                            <div class="event__detailed_info_date">13.02.2023</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div> -->
+                </li>
 
-            <!-- <div class="event">
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">03</div>
-                            <div class="event__brief_title">event</div>
+                        <img src="img/event_2.jpeg" class="event__wrapper_image tablet-hidden" alt="mafia_event">
+                        <img src="img/event_2.jpeg" class="event__wrapper_image tablet-show" alt="mafia_event">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Мafia event</div>
+                            <div class="event__wrapper_info_horizontal">02</div>
                         </div>
-                        <div class="event__detailed">
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_2.jpeg" class="event__detailed_image" alt="mafia_event">
+                        <div class="event__detailed_info">
+                            <div class="event__detailed_num">02</div>
+                            <div class="event__detailed_info_title">Мafia event</div>
+                            <div class="event__detailed_info_date">10.01.2023</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                <span> More information</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="carousel__slide">
+                    <div class="event__wrapper">
+                        <img src="img/event_3.jpeg" class="event__wrapper_image tablet-hidden" alt="Party">
+                        <img src="img/event_3.jpeg" class="event__wrapper_image tablet-show" alt="Party">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Party</div>
+                            <div class="event__wrapper_info_horizontal">03</div>
+                        </div>
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_3.jpeg" class="event__detailed_image" alt="Party">
+                        <div class="event__detailed_info">
                             <div class="event__detailed_num">03</div>
-                            <div class="event__detailed_title">event</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__info">More information</button>
-                            <div class="event__img"></div>
+                            <div class="event__detailed_info_title">Party</div>
+                            <div class="event__detailed_info_date">20.02.2022</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="event">
+                </li>
+
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">04</div>
-                            <div class="event__brief_title">event on the beach</div>
+                        <img src="img/event_4.jpeg" class="event__wrapper_image tablet-hidden" alt="Party on the beach">
+                        <img src="img/event_4.jpeg" class="event__wrapper_image tablet-show" alt="Party on the beach">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Party on the beach</div>
+                            <div class="event__wrapper_info_horizontal">04</div>
                         </div>
-                        <div class="event__detailed">
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_4.jpeg" class="event__detailed_image" alt="Party on the beach">
+                        <div class="event__detailed_info">
                             <div class="event__detailed_num">04</div>
-                            <div class="event__detailed_title">event on the beach</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__info">More information</button>
-                            <div class="event__img"></div>
+                            <div class="event__detailed_info_title">Party on the beach</div>
+                            <div class="event__detailed_info_date">10.12.2021</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="event">
+                </li>
+
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">05</div>
-                            <div class="event__brief_title">Home Security</div>
+                        <img src="img/event_5.png" class="event__wrapper_image tablet-hidden" alt="Home Security">
+                        <img src="img/event_5.png" class="event__wrapper_image tablet-show" alt="Home Security">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Home Security</div>
+                            <div class="event__wrapper_info_horizontal">05</div>
                         </div>
-                        <div class="event__detailed">
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_5.png" class="event__detailed_image" alt="Home Security">
+                        <div class="event__detailed_info">
                             <div class="event__detailed_num">05</div>
-                            <div class="event__detailed_title">Home Security</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__detailed_info">More information</button>
-                            <div class="event__detailed_img"></div>
+                            <div class="event__detailed_info_title">Home Security</div>
+                            <div class="event__detailed_info_date">28.07.2021</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="event">
+                </li>
+
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">06</div>
-                            <div class="event__brief_title">Network Design & Implementation</div>
+                        <img src="img/event_6.jpeg" class="event__wrapper_image tablet-hidden"
+                            alt="Network Design & Implementation">
+                        <img src="img/event_6.jpeg" class="event__wrapper_image tablet-show"
+                            alt="Network Design & Implementation">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Network Design & Implementation</div>
+                            <div class="event__wrapper_info_horizontal">06</div>
                         </div>
-                        <div class="event__detailed">
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_6.jpeg" class="event__detailed_image" alt="Network Design & Implementation">
+                        <div class="event__detailed_info">
                             <div class="event__detailed_num">06</div>
-                            <div class="event__detailed_title">Network Design & Implementation</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__detailed_info">More information</button>
-                            <div class="event__detailed_img"></div>
+                            <div class="event__detailed_info_title">Network Design & Implementation</div>
+                            <div class="event__detailed_info_date">15.04.2021</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="event">
+                </li>
+
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">07</div>
-                            <div class="event__brief_title">System Design & Engineering</div>
+                        <img src="img/event_7.jpeg" class="event__wrapper_image tablet-hidden"
+                            alt="System Design & Engineering">
+                        <img src="img/event_7.jpeg" class="event__wrapper_image tablet-show"
+                            alt="System Design & Engineering">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">System Design & Engineering</div>
+                            <div class="event__wrapper_info_horizontal">07</div>
                         </div>
-                        <div class="event__detailed">
+                    </div>
+                    <div class="event__detailed">
+                        <img src="img/event_7.jpeg" class="event__detailed_image" alt="System Design & Engineering">
+                        <div class="event__detailed_info">
                             <div class="event__detailed_num">07</div>
-                            <div class="event__detailed_title">System Design & Engineering</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__detailed_info">More information</button>
-                            <div class="event__detailed_img"></div>
+                            <div class="event__detailed_info_title">System Design & Engineering</div>
+                            <div class="event__detailed_info_date">14.12.2020</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="event">
+                </li>
+
+                <li class="carousel__slide">
                     <div class="event__wrapper">
-                        <div class="event__brief">
-                            <div class="event__brief_num">08</div>
-                            <div class="event__brief_title">Client Care Plans</div>
-                        </div>
-                        <div class="event__detailed">
-                            <div class="event__detailed_num">08</div>
-                            <div class="event__detailed_title">Client Care Plans</div>
-                            <div class="event__detailed_date"></div>
-                            <button class="event__detailed_info">More information</button>
-                            <div class="event__detailed_img"></div>
+                        <img src="img/event_8.jpeg" class="event__wrapper_image tablet-hidden" alt="Client Care Plans">
+                        <img src="img/event_8.jpeg" class="event__wrapper_image tablet-show" alt="Client Care Plans">
+                        <div class="event__wrapper_info">
+                            <div class="event__wrapper_info_vertical">Client Care Plans</div>
+                            <div class="event__wrapper_info_horizontal">08</div>
                         </div>
                     </div>
-                </div> -->
+                    <div class="event__detailed">
+                        <img src="img/event_8.jpeg" class="event__detailed_image" alt="Client Care Plans">
+                        <div class="event__detailed_info">
+                            <div class="event__detailed_num">08</div>
+                            <div class="event__detailed_info_title">Client Care Plans</div>
+                            <div class="event__detailed_info_date">24.08.2020</div>
+                            <a href="#" class="event__detailed_info_btn" target="_blank">
+                                More information
+                            </a>
+                        </div>
+                    </div>
+                </li>
 
-            <!-- </div> -->
-            <!-- </div> -->
-
+            </ul>
         </div>
     </section>
+
+    <section id="popup" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__form">
+                <button class="popup__form_close close">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5_64)">
+                            <path
+                                d="M13.6711 12.8072L24.0706 2.40765C24.4368 2.04151 24.4368 1.44789 24.0706 1.08179C23.7045 0.715702 23.1109 0.715655 22.7448 1.08179L12.3452 11.4814L1.94568 1.08179C1.57954 0.715655 0.985913 0.715655 0.61982 1.08179C0.253727 1.44794 0.25368 2.04156 0.61982 2.40765L11.0193 12.8072L0.61982 23.2068C0.25368 23.5729 0.25368 24.1665 0.61982 24.5326C0.802866 24.7157 1.04282 24.8072 1.28277 24.8072C1.52272 24.8072 1.76263 24.7157 1.94572 24.5326L12.3452 14.1331L22.7447 24.5326C22.9278 24.7157 23.1677 24.8072 23.4077 24.8072C23.6476 24.8072 23.8875 24.7157 24.0706 24.5326C24.4368 24.1665 24.4368 23.5729 24.0706 23.2068L13.6711 12.8072Z"
+                                fill="#135978" fill-opacity="0.5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_5_64">
+                                <rect width="24" height="24" fill="white" transform="translate(0.345703 0.806458)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="popup__form_title"></div>
+                <div class="popup__form_subtitle"></div>
+                <button class="popup__form_btn close">Close</button>
+            </div>
+        </div>
+    </section>
+
 
     <script src="js/script.js"></script>
 </body>

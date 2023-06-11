@@ -1,35 +1,46 @@
-.modal {
+.popup {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     overflow: hidden;
     background: rgba(22, 44, 78, 0.6);
 
-    .success-form {
-        position: relative;
+    &-open {
+        overflow: hidden;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    &__wrapper {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         width: 320px;
         height: 370px;
         background: #FFFFFF;
         border: 1px solid rgba(19, 89, 120, 0.07);
-        border-radius: 2px;
 
-        &__close {
-            padding: 15px;
-            margin-top: 7px;
-            position: absolute;
-            right: 0;
-            cursor: pointer;
+        &_close {
+            background: unset;
+            border: none;
+            margin: 15px 15px 0 auto;
         }
 
-        &__title {
-            margin-top: 97px;
+        &_title {
+            margin-top: 40px;
             font-weight: 700;
             font-size: 36px;
             line-height: 37px;
@@ -38,8 +49,8 @@
             color: $main-color;
         }
 
-        &__subtitle {
-            margin: 28px 24px 0;
+        &_subtitle {
+            margin: 29px 24px 0;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
@@ -47,11 +58,11 @@
             color: rgba(0, 0, 0, 0.8);
         }
 
-        &__btn {
+        &_btn {
             width: 200px;
             height: 60px;
             display: block;
-            margin: 29px auto;
+            margin: 30px auto;
             background: #1D4169;
             border-radius: 40px;
             border: none;

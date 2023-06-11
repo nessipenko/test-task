@@ -1,4 +1,7 @@
 .footer {
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +42,8 @@
     }
 
     &__other {
+        transform: translateY(-50%);
+        top: 50%;
         position: absolute;
         right: 111px;
 
@@ -107,8 +112,9 @@
         }
 
         &__other {
-            right: auto;
-            margin-top: 60px;
+            transform: translateX(50%);
+            right: 50%;
+            margin-top: 15px;
 
             &_btn {
                 font-size: 16px;
@@ -137,8 +143,7 @@
         }
 
         &__other {
-            right: auto;
-            margin-top: 60px;
+
 
             &_btn {
                 font-size: 16px;
